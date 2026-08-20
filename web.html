@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicla No 4 -Javascript Basics,Function and Events</title>
+
+ <style>
+    body{
+    font-family: Arial, helvetica, sans-serif;
+    background:#f5f5f5;
+    margin:30px;
+}
+ .container{
+  width:700px;
+  margin:auto;
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 0 10px gray;
+}
+
+ h1,h2{
+  text-align:center;
+ color:darkblue;
+}
+
+ button{
+       padding:10px 20px;
+       margin:10px;
+       cursor:pointer;
+}
+
+  input{
+  width:95%;
+  padding:10px;
+  margin:8px 0;
+}
+
+
+#result{
+    margin-top:20px;
+    background:#eeeeee;
+   padding:15px;
+   border-radius:5px;
+}
+
+#mouseoverText{
+  font-size:22px:
+  color:black;
+}
+</style>
+    
+<script>
+
+//=========================
+//VARIABLES,OPERATORS 
+//=========================
+function calculate()
+{
+    let num1=20;
+    let num2=10;
+
+    let add=num1+num2;
+    let sub=num1-num2;
+    let mul=num1*num2;
+    let div=num1/num2;
+let output="";
+  
+
+  output+="Number 1= "+num1+"<br>";
+  output+="Number 2= "+num+2"<br><br>";
+
+  output+="Addition= "+add+"<br>";
+  output+="Subtraction= "+sub+"<br>";
+  output+="Multiplication= "+mul+"<br>";
+  output+="Division= "+div+"<br>";
+
+//========================================
+CONDITONs
+//========================================
+
+ if(num1>num2)
+{
+output+="20 is greater than 10<br><br>";
+}
+else
+{
+output+="10 is greater<br><br>";
+}
+
+//=======================================
+LOOPs
+//======================================
+ output+="Number from 1 to 10<br>";
+for(let i=1;i<=10;i++)
+{
+output+=i+" ";
+}
+ document.getElementById("result").innerHTML=output;
+}
+
+//===================================================
+FUNCTION EXAMPLE
+//==================================================
+  
+function welcome()
+{
+alert("Welcome to javascript practical");
+}
+
+//================================================
+MOUSEOVER EVENT
+//==============================================
+ function changeColor()
+{
+document.getElementById("mouseoverText").style.color="red";
+}
+function normalColor()
+{
+document.geElementById("mouseoverText").style.color="black";
+}
+//=======================================================
+FORM VALIDATION
+//=======================================================
+function validationForm()
+{
+let name=document.getElementById("name").value;
+let email=document.getElementById("email").value;
+let mobile=document.getElementById("mob").value;
+let password=document.getElementById("password").value;
+ 
+if(name=="")
+{
+alert("Enter Name:");
+return false;
+}
+
+if(email=="")
+{
+alert("Enter Email:");
+return false;
+}
+
+if(!email.include("@")
+{
+alert("Invalid Email");
+return false;
+}
+
+if(mobile.length!=10)
+{
+alert("Mobile Number should contain 10 digits");
+return false;
+}
+ 
+if(password.length<6)
+{
+alert("Password Should contain minimum 5 characters");
+return false;
+}
+
+alert("form Submitted Successfully");
+return true;
+}
+</script>
+</head>
+<body>
+<div class="container">
+<h1>Practical No 4</h1>
+<h2>Javascript Basics , Functions and Events</h2>
+<hr>
+<h3>variables,Operators, condition and loops</h3>
+
+
+<button onclick="calculate()">
+Run Javascript Program
+</button>
+<hr>
+<h3>Function example</h3>
+
+<button onclick="welcome()">
+Click here
+</button>
+
+<hr>
+<h3>Mouse Over event</h3>
+<p id="mouseoverText"
+onmousover="changeColor()"
+onmouseout="normalColor()">
+
+Move Mouse Over This Text 
+</p>
+<hr>
+<h3>Student Registration Form</h3>
+<form onsubmit="return validationForm()">
+<label>Name</label>
+<input type="text" id="name" placeholder="Enter Name">
+<label>email</label>
+<input type="email" id="email" placeholder="Enter Email">
+<label>Mobile Number</label>
+<input type="text" id="mobile" placeholder="Enter Mobile Number">
+<label>password</label>
+<input type="password" id="password" placeholder="Enter Password">
+<br><br>
+<input type="submit" value="submit">
+</form>
+</div>
+</body>
+</html>
