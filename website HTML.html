@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PyLearn — Learn Python</title>
+
+    <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-icon">🐍</span>
+        PyLearn
+      </a>
+
+      <div class="nav-links">
+        <a href="#courses">Courses</a>
+        <a href="#lessons">Lessons</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#playground">Playground</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeBtn" title="Toggle theme">🌙</button>
+        <button class="icon-btn menu-btn" id="menuBtn">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div>
+      <span class="badge">🚀 Learn Python from zero to advanced</span>
+
+      <h1>
+        Learn Python.<br />
+        <span class="gradient-text">Build Anything.</span>
+      </h1>
+
+      <p>
+        A simple, interactive Python learning platform designed to take you
+        from your first line of code to real-world programming.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#courses" class="btn btn-primary">Start Learning →</a>
+        <a href="#playground" class="btn btn-secondary">Try Python</a>
+      </div>
+    </div>
+
+    <div class="terminal">
+      <div class="terminal-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+      </div>
+
+      <pre><span class="comment"># Your Python journey starts here</span>
+
+<span class="kw">def</span> <span class="fn">welcome</span>(name):
+    <span class="kw">return</span> <span class="str">f"Hello, {name}!"</span>
+
+message = <span class="fn">welcome</span>(<span class="str">"Python Developer"</span>)
+
+<span class="fn">print</span>(message)
+
+<span class="comment"># Output:</span>
+<span class="str">Hello, Python Developer!</span></pre>
+    </div>
+  </header>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="stat">
+      <strong>12+</strong>
+      <span>Learning Modules</span>
+    </div>
+
+    <div class="stat">
+      <strong>50+</strong>
+      <span>Practice Questions</span>
+    </div>
+
+    <div class="stat">
+      <strong>30+</strong>
+      <span>Code Examples</span>
+    </div>
+
+    <div class="stat">
+      <strong id="statProgress">0%</strong>
+      <span>Your Progress</span>
+    </div>
+  </section>
+
+  <!-- COURSES -->
+  <section class="section" id="courses">
+    <div class="section-header">
+      <h2>Python Learning Path</h2>
+      <p>Follow the path from beginner to confident Python programmer.</p>
+    </div>
+
+    <div class="search-wrap">
+      <span class="search-icon">🔎</span>
+      <input
+        id="courseSearch"
+        class="search"
+        type="text"
+        placeholder="Search lessons, e.g. functions, loops, lists..."
+      />
+    </div>
+
+    <div class="course-grid" id="courseGrid">
+
+      <article class="course-card" data-search="python basics introduction variables print">
+        <div class="course-icon">🌱</div>
+        <h3>Python Basics</h3>
+        <p>Learn syntax, variables, data types, input and output.</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 80%"></div>
+        </div>
+        <div class="course-meta">
+          <span>6 lessons</span>
+          <span>80%</span>
+        </div>
+      </article>
+
+      <article class="course-card" data-search="conditions if else elif comparison">
+        <div class="course-icon">🔀</div>
+        <h3>Conditions</h3>
+        <p>Make decisions with if, elif, else and comparison operators.</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 45%"></div>
+        </div>
+        <div class="course-meta">
+          <span>5 lessons</span>
+          <span>45%</span>
+        </div>
+      </article>
+
+      <article class="course-card" data-search="loops for while iteration">
+        <div class="course-icon">🔁</div>
+        <h3>Loops</h3>
+        <p>Master for loops, while loops, range and iteration.</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 30%"></div>
+        </div>
+        <div class="course-meta">
+          <span>5 lessons</span>
+          <span>30%</span>
+        </div>
+      </article>
+
+      <article class="course-card" data-search="lists tuples sets dictionaries data structures">
+        <div class="course-icon">📦</div>
+        <h3>Data Structures</h3>
+        <p>Work with lists, tuples, sets and dictionaries.</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 20%"></div>
+        </div>
+        <div class="course-meta">
+          <span>8 lessons</span>
+          <span>20%</span>
+        </div>
+      </article>
+
+      <article class="course-card" data-search="functions parameters return lambda">
+        <div class="course-icon">⚙️</div>
+        <h3>Functions</h3>
+        <p>Create reusable code using functions, parameters and return values.</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 10%"></div>
+        </div>
+        <div class="course-meta">
+          <span>7 lessons</span>
+          <span>10%</span>
+        </div>
+      </article>
+
+      <article class="course-card" data-search="oop classes objects inheritance">
+        <div class="course-icon">🧩</div>
+        <h3>Object-Oriented Python</h3>
+        <p>Understand classes, objects, inheritance and encapsulation.</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 0%"></div>
+        </div>
+        <div class="course-meta">
+          <span>9 lessons</span>
+          <span>Start</span>
+        </div>
+      </article>
+
+      <article class="course-card" data-search="files exceptions error handling">
+        <div class="course-icon">📄</div>
+        <h3>Files & Errors</h3>
+        <p>Read files, write files and handle exceptions correctly.</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 0%"></div>
+        </div>
+        <div class="course-meta">
+          <span>6 lessons</span>
+          <span>Start</span>
+        </div>
+      </article>
+
+      <article class="course-card" data-search="modules packages pip libraries">
+        <div class="course-icon">📚</div>
+        <h3>Modules & Packages</h3>
+        <p>Use Python modules, packages and third-party libraries.</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 0%"></div>
+        </div>
+        <div class="course-meta">
+          <span>5 lessons</span>
+          <span>Start</span>
+        </div>
+      </article>
+
+      <article class="course-card" data-search="projects automation web data science">
+        <div class="course-icon">🚀</div>
+        <h3>Real Projects</h3>
+        <p>Build useful projects and apply everything you have learned.</p>
+        <div class="progress">
+          <div class="progress-bar" style="width: 0%"></div>
+        </div>
+        <div class="course-meta">
+          <span>10 projects</span>
+          <span>Start</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- LESSONS -->
+  <section class="section" id="lessons">
+    <div class="section-header">
+      <h2>Interactive Lessons</h2>
+      <p>Learn a concept, see an example and mark it complete.</p>
+    </div>
+
+    <div class="lesson-layout">
+
+      <aside class="lesson-nav">
+        <button class="active" data-lesson="variables">01 · Variables</button>
+        <button data-lesson="strings">02 · Strings</button>
+        <button data-lesson="conditions">03 · Conditions</button>
+        <button data-lesson="loops">04 · Loops</button>
+        <button data-lesson="functions">05 · Functions</button>
+      </aside>
+
+      <article class="lesson-content" id="lessonContent"></article>
+
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="section" id="quiz">
+    <div class="section-header">
+      <h2>Test Your Python Knowledge 🧠</h2>
+      <p>Answer the questions and see how much you've learned.</p>
+    </div>
+
+    <div class="quiz-box">
+      <div class="quiz-progress" id="quizProgress"></div>
+
+      <div class="quiz-question" id="quizQuestion"></div>
+
+      <div class="options" id="quizOptions"></div>
+
+      <div id="quizFeedback"></div>
+
+      <button class="btn btn-primary check-btn" id="nextQuestion">
+        Next Question →
+      </button>
+    </div>
+  </section>
+
+  <!-- PLAYGROUND -->
+  <section class="section" id="playground">
+    <div class="section-header">
+      <h2>Python Playground 💻</h2>
+      <p>Write Python and run it directly in your browser.</p>
+    </div>
+
+    <div class="playground">
+
+      <div class="editor">
+        <div class="editor-header">
+          Python Editor
+        </div>
+
+        <textarea id="codeEditor">name = "Python"
+age = 30
+
+print("Hello,", name)
+print("Age:", age)</textarea>
+      </div>
+
+      <div class="output">
+        <div class="output-header">
+          Output
+        </div>
+
+        <div id="output">Click "Run Python" to execute your code.</div>
+      </div>
+
+    </div>
+
+    <button
+      class="btn btn-primary"
+      id="runPython"
+      style="margin-top:15px;"
+    >
+      ▶ Run Python
+    </button>
+
+    <p style="color:var(--muted);font-size:13px;margin-top:10px;">
+      The playground uses Pyodide to run Python through WebAssembly in your browser.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>🐍 PyLearn — Learn Python by building.</p>
+    <p style="margin-top:6px;">Made for curious developers.</p>
+  </footer>
+
+
+  <!-- PYODIDE -->
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js"></script>
+
+  <script>
+    /* =========================
+       THEME
+    ========================= */
+
+    const themeBtn = document.getElementById("themeBtn");
+
+    const savedTheme = localStorage.getItem("pylearn-theme");
+
+    if (savedTheme) {
+      document.documentElement.dataset.theme = savedTheme;
+      themeBtn.textContent = savedTheme === "dark" ? "☀️" : "🌙";
+    }
+
+    themeBtn.addEventListener("click", () => {
+      const current =
+        document.documentElement.dataset.theme === "dark"
+          ? "light"
+          : "dark";
+
+      if (current === "dark") {
+        document.documentElement.dataset.theme = "dark";
+        themeBtn.textContent = "☀️";
+      } else {
+        document.documentElement.removeAttribute("data-theme");
+        themeBtn.textContent = "🌙";
+      }
+
+      localStorage.setItem("pylearn-theme", current);
+    });
+
+
+    /* =========================
+       COURSE SEARCH
+    ========================= */
+
+    const search = document.getElementById("courseSearch");
+    const cards = document.querySelectorAll(".course-card");
+
+    search.addEventListener("input", () => {
+      const value = search.value.toLowerCase().trim();
+
+      cards.forEach(card => {
+        const text = card.dataset.search.toLowerCase();
+
+        card.style.display =
+          text.includes(value) ? "block" : "none";
+      });
+    });
+
+
+    /* =========================
+       LESSON DATA
+    ========================= */
+
+    const lessons = {
+
+      variables: {
+        title: "Python Variables",
+        description:
+          "Variables store information that your program can use later. Python automatically determines the type of a value.",
+        content: `
+          <h3>Creating a variable</h3>
+
+          <p>
+            You don't need to declare the type of a variable in Python.
+            Simply assign a value using <strong>=</strong>.
+          </p>
+
+          <div class="code-block">
+            <button class="copy-code">Copy</button>
+            <pre>name = "Alice"
+age = 25
+height = 1.68
+is_student = True
+
+print(name)
+print(age)</pre>
+          </div>
+
+          <h3>Common data types</h3>
+
+          <p>
+            Python has many built-in data types including strings,
+            integers, floats and booleans.
+          </p>
+
+          <div class="code-block">
+            <pre>name = "Alice"      # str
+age = 25            # int
+price = 19.99       # float
+active = True       # bool</pre>
+          </div>
+
+          <button class="btn btn-primary complete-lesson">
+            ✓ Mark Lesson Complete
+          </button>
+        `
+      },
+
+      strings: {
+        title: "Python Strings",
+        description:
+          "Strings represent text. Python gives you powerful tools for combining and manipulating strings.",
+        content: `
+          <h3>Creating strings</h3>
+
+          <div class="code-block">
+            <button class="copy-code">Copy</button>
+            <pre>name = "Alice"
+message = 'Hello Python!'
+
+print(message)</pre>
+          </div>
+
+          <h3>String formatting</h3>
+
+          <p>
+            F-strings make it easy to insert variables into text.
+          </p>
+
+          <div class="code-block">
+            <pre>name = "Sam"
+age = 22
+
+message = f"My name is {name} and I am {age}."
+
+print(message)</pre>
+          </div>
+
+          <h3>Useful methods</h3>
+
+          <div class="code-block">
+            <pre>text = "python programming"
+
+print(text.upper())
+print(text.lower())
+print(text.title())</pre>
+          </div>
+
+          <button class="btn btn-primary complete-lesson">
+            ✓ Mark Lesson Complete
+          </button>
+        `
+      },
+
+      conditions: {
+        title: "Conditions",
+        description:
+          "Conditions allow your program to make decisions based on whether something is true or false.",
+        content: `
+          <h3>The if statement</h3>
+
+          <div class="code-block">
+            <pre>age = 20
+
+if age >= 18:
+    print("You are an adult.")</pre>
+          </div>
+
+          <h3>if, elif and else</h3>
+
+          <div class="code-block">
+            <pre>score = 75
+
+if score >= 90:
+    print("Excellent")
+elif score >= 60:
+    print("Passed")
+else:
+    print("Try again")</pre>
+          </div>
+
+          <button class="btn btn-primary complete-lesson">
+            ✓ Mark Lesson Complete
+          </button>
+        `
+      },
+
+      loops: {
+        title: "Python Loops",
+        description:
+          "Loops repeat code. Python provides for loops and while loops for iteration.",
+        content: `
+          <h3>For loops</h3>
+
+          <div class="code-block">
+            <pre>for number in range(5):
+    print(number)</pre>
+          </div>
+
+          <h3>Looping through a list</h3>
+
+          <div class="code-block">
+            <pre>languages = ["Python", "JavaScript", "Go"]
+
+for language in languages:
+    print(language)</pre>
+          </div>
+
+          <h3>While loops</h3>
+
+          <div class="code-block">
+            <pre>count = 0
+
+while count < 5:
+    print(count)
+    count += 1</pre>
+          </div>
+
+          <button class="btn btn-primary complete-lesson">
+            ✓ Mark Lesson Complete
+          </button>
+        `
+      },
+
+      functions: {
+        title: "Python Functions",
+        description:
+          "Functions let you organize reusable pieces of code.",
+        content: `
+          <h3>Creating a function</h3>
+
+          <div class="code-block">
+            <pre>def greet(name):
+    return f"Hello, {name}!"
+
+message = greet("Alex")
+
+print(message)</pre>
+          </div>
+
+          <h3>Parameters</h3>
+
+          <p>
+            Parameters allow a function to receive information from
+            the code that calls it.
+          </p>
+
+          <div class="code-block">
+            <pre>def add(a, b):
+    return a + b
+
+result = add(10, 20)
+
+print(result)</pre>
+          </div>
+
+          <button class="btn btn-primary complete-lesson">
+            ✓ Mark Lesson Complete
+          </button>
+        `
+      }
+    };
+
+
+    /* =========================
+       LESSON RENDERING
+    ========================= */
+
+    const lessonContent =
+      document.getElementById("lessonContent");
+
+    const lessonButtons =
+      document.querySelectorAll(".lesson-nav button");
+
+    function showLesson(name) {
+
+      const lesson = lessons[name];
+
+      lessonContent.innerHTML = `
+        <h2>${lesson.title}</h2>
+        <p>${lesson.description}</p>
+        ${lesson.content}
+      `;
+
+      document.querySelectorAll(".copy-code").forEach(button => {
+
+        button.addEventListener("click", () => {
+
+          const code =
+            button.parentElement.querySelector("pre").innerText;
+
+          navigator.clipboard.writeText(code);
+
+          button.textContent = "Copied!";
+
+          setTimeout(() => {
+            button.textContent = "Copy";
+          }, 1200);
+        });
+
+      });
+
+      document.querySelector(".complete-lesson")
+        .addEventListener("click", () => {
+
+          markLessonComplete(name);
+
+        });
+    }
+
+
+    lessonButtons.forEach(button => {
+
+      button.addEventListener("click", () => {
+
+        lessonButtons.forEach(b =>
+          b.classList.remove("active")
+        );
+
+        button.classList.add("active");
+
+        showLesson(button.dataset.lesson);
+      });
+
+    });
+
+
+    function markLessonComplete(name) {
+
+      const completed =
+        JSON.parse(
+          localStorage.getItem("pylearn-completed") || "[]"
+        );
+
+      if (!completed.includes(name)) {
+        completed.push(name);
+      }
+
+      localStorage.setItem(
+        "pylearn-completed",
+        JSON.stringify(completed)
+      );
+
+      updateProgress();
+
+      const button =
+        document.querySelector(".complete-lesson");
+
+      button.textContent = "✓ Completed!";
+      button.style.background = "var(--success)";
+    }
+
+
+    function updateProgress() {
+
+      const completed =
+        JSON.parse(
+          localStorage.getItem("pylearn-completed") || "[]"
+        );
+
+      const total = Object.keys(lessons).length;
+
+      const percentage =
+        Math.round((completed.length / total) * 100);
+
+      document.getElementById("statProgress")
+        .textContent = percentage + "%";
+    }
+
+
+    showLesson("variables");
+    updateProgress();
+
+
+    /* =========================
+       QUIZ
+    ========================= */
+
+    const questions = [
+      {
+        question: "Which keyword is used to define a function?",
+        options: ["function", "def", "func", "define"],
+        answer: 1
+      },
+      {
+        question: "Which data type stores True or False?",
+        options: ["str", "bool", "int", "float"],
+        answer: 1
+      },
+      {
+        question: "What does len() return?",
+        options: [
+          "The first item",
+          "The last item",
+          "The number of items",
+          "The data type"
+        ],
+        answer: 2
+      },
+      {
+        question: "Which symbol is used for a comment?",
+        options: ["//", "#", "<!--", "/*"],
+        answer: 1
+      },
+      {
+        question: "Which loop is commonly used to iterate over a list?",
+        options: ["for", "repeat", "loop", "iterate"],
+        answer: 0
+      }
+    ];
+
+    let currentQuestion = 0;
+    let quizScore = 0;
+    let answered = false;
+
+    const quizQuestion =
+      document.getElementById("quizQuestion");
+
+    const quizOptions =
+      document.getElementById("quizOptions");
+
+    const quizProgress =
+      document.getElementById("quizProgress");
+
+    const quizFeedback =
+      document.getElementById("quizFeedback");
+
+    const nextQuestion =
+      document.getElementById("nextQuestion");
+
+
+    function loadQuestion() {
+
+      answered = false;
+
+      const q = questions[currentQuestion];
+
+      quizProgress.textContent =
+        `Question ${currentQuestion + 1} of ${questions.length}`;
+
+      quizQuestion.textContent = q.question;
+
+      quizFeedback.textContent = "";
+
+      nextQuestion.textContent =
+        currentQuestion === questions.length - 1
+          ? "Finish Quiz"
+          : "Next Question →";
+
+      quizOptions.innerHTML = "";
+
+      q.options.forEach((option, index) => {
+
+        const button =
+          document.createElement("button");
+
+        button.className = "option";
+        button.textContent = option;
+
+        button.addEventListener("click", () => {
+
+          if (answered) return;
+
+          answered = true;
+
+          if (index === q.answer) {
+
+            button.classList.add("correct");
+            quizFeedback.textContent =
+              "✓ Correct! Great job.";
+
+            quizFeedback.style.color =
+              "var(--success)";
+
+            quizScore++;
+
+          } else {
+
+            button.classList.add("wrong");
+
+            quizFeedback.textContent =
+              `✗ Not quite. The correct answer is "${q.options[q.answer]}".`;
+
+            quizFeedback.style.color =
+              "var(--danger)";
+          }
+
+          [...quizOptions.children].forEach((btn, i) => {
+
+            if (i === q.answer) {
+              btn.classList.add("correct");
+            }
+
+            btn.disabled = true;
+
+          });
+
+        });
+
+        quizOptions.appendChild(button);
+
+      });
+    }
+
+
+    nextQuestion.addEventListener("click", () => {
+
+      if (!answered) {
+        quizFeedback.textContent =
+          "Choose an answer first.";
+        quizFeedback.style.color =
+          "var(--warning)";
+        return;
+      }
+
+      if (currentQuestion === questions.length - 1) {
+
+        quizQuestion.textContent =
+          `🎉 Quiz Complete! You scored ${quizScore}/${questions.length}.`;
+
+        quizOptions.innerHTML = "";
+
+        quizFeedback.textContent =
+          quizScore === questions.length
+            ? "Perfect score!"
+            : "Keep practicing and try again.";
+
+        nextQuestion.textContent = "Restart Quiz";
+
+        currentQuestion = 0;
+        quizScore = 0;
+
+        return;
+      }
+
+      currentQuestion++;
+
+      loadQuestion();
+    });
+
+
+    loadQuestion();
+
+
+    /* =========================
+       PYTHON PLAYGROUND
+    ========================= */
+
+    let pyodide = null;
+
+    const output =
+      document.getElementById("output");
+
+    const codeEditor =
+      document.getElementById("codeEditor");
+
+    const runPython =
+      document.getElementById("runPython");
+
+
+    async function loadPython() {
+
+      output.textContent =
+        "Loading Python engine...";
+
+      try {
+
+        pyodide =
+          await loadPyodide();
+
+        output.textContent =
+          "Python is ready! Click Run Python.";
+
+        runPython.disabled = false;
+
+      } catch (error) {
+
+        output.textContent =
+          "Could not load Python engine.";
+
+        console.error(error);
+      }
+    }
+
+
+    runPython.disabled = true;
+
+
+    runPython.addEventListener("click", async () => {
+
+      if (!pyodide) return;
+
+      output.textContent = "Running...";
+
+      try {
+
+        const code =
+          codeEditor.value;
+
+        let capturedOutput = "";
+
+        pyodide.setStdout({
+          batched: (text) => {
+            capturedOutput += text;
+          }
+        });
+
+        await pyodide.runPythonAsync(code);
+
+        output.textContent =
+          capturedOutput || "(No output)";
+
+      } catch (error) {
+
+        output.textContent =
+          "Error:\n" + error;
+
+      }
+
+    });
+
+
+    loadPython();
+
+
+    /* =========================
+       MOBILE MENU
+    ========================= */
+
+    document.getElementById("menuBtn")
+      .addEventListener("click", () => {
+
+        const links =
+          document.querySelector(".nav-links");
+
+        if (links.style.display === "flex") {
+          links.style.display = "";
+        } else {
+          links.style.display = "flex";
+          links.style.position = "absolute";
+          links.style.top = "72px";
+          links.style.left = "0";
+          links.style.right = "0";
+          links.style.padding = "20px";
+          links.style.background = "var(--surface)";
+          links.style.flexDirection = "column";
+          links.style.borderBottom =
+            "1px solid var(--border)";
+        }
+
+      });
+
+  </script>
+
+</body>
+</html>
